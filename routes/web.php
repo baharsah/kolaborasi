@@ -36,3 +36,7 @@ Route::get('/submission', function () {
 Route::get('/discussion', function () {
     return view('discussion');
 });
+
+Route::get('/information', function () {
+    return view('information');
+});
