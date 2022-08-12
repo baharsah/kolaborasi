@@ -29,3 +29,6 @@ Route::get('/account', function () {
     return view('account');
 });
 
+Route::get('/submission', function () {
+    return view('submission');
+});
