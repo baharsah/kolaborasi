@@ -32,3 +32,7 @@ Route::get('/account', function () {
 Route::get('/submission', function () {
     return view('submission');
 });
+
+Route::get('/discussion', function () {
+    return view('discussion');
+});
