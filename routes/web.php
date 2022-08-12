@@ -17,6 +17,24 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::middleware(['auth'])->group(function() {
+    Route::get('/account', function () {
+        return view('account');
+    });
+    
+    Route::get('/submission', function () {
+        return view('submission');
+    });
+    
+    Route::get('/discussion', function () {
+        return view('discussion');
+    });
+    
+    Route::get('/information', function () {
+        return view('information');
+    });
+});
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -25,18 +43,4 @@ Route::get('/profile', function () {
     return view('profil');
 });
 
-Route::get('/account', function () {
-    return view('account');
-});
 
-Route::get('/submission', function () {
-    return view('submission');
-});
-
-Route::get('/discussion', function () {
-    return view('discussion');
-});
-
-Route::get('/information', function () {
-    return view('information');
-});
