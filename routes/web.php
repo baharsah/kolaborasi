@@ -24,3 +24,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/profile', function () {
     return view('profil');
 });
+
+Route::get('/account', function () {
+    return view('account');
+});
+
