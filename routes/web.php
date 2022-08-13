@@ -44,4 +44,10 @@ Route::get('/profile', function () {
     return view('profil');
 });
 
+Route::get('/login/perguruan-tinggi', function() {
+    return view('auth.login');
+});
 
+Route::get('/login/industri', function() {
+    return view('auth.login');
+});
