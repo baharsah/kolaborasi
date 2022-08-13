@@ -39,7 +39,7 @@
                             <div class="w-75">Lebih tepat sasaran untuk kontribusikan hasil temuan dan solusi</div>
                         </div>
                         <div class="d-flex justify-content-center mt-3">
-                            <a href="/login" class="btn btn-primary">Masuk</a>
+                            <a href="/login/perguruan-tinggi" class="btn btn-primary">Masuk</a>
                         </div>
                     </div>
                 </div>
@@ -71,7 +71,7 @@
                             <div class="w-75">Bertemu dengan Perguruan Tinggi (Dosen dan Mahasiswa) unggulan</div>
                         </div>
                         <div class="d-flex justify-content-center mt-3">
-                            <a href="/login" class="btn btn-primary">Masuk</a>
+                            <a href="/login/industri" class="btn btn-primary">Masuk</a>
                         </div>
                     </div>
                 </div>
