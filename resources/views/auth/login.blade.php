@@ -55,29 +55,16 @@
                                         </div>
                                     </div>
 
-                                    <div class="row mb-3">
-                                        <div class="col-md-6 offset-md-4">
-                                            <div>
-                                                @if (Route::has('password.request'))
-                                                    Lupa kata sandi?
-                                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                                        Atur ulang
-                                                    </a>
-                                                @endif
-                                            </div>
-                                        </div>
-                                    </div>
-
                                     <div class="row mb-3 justify-content-center">
-                                        <div class="text-center w-75">
-                                            <div>
+                                        <div class="text-center mt-2">
+                                            <small>
                                                 Dengan klik tombol "Masuk", Anda setuju dengan <a href="#">syarat &
                                                     ketentuan</a> serta <a href="#">kebijakan privasi</a> kami
-                                            </div>
+                                            </small>
                                         </div>
                                     </div>
 
-                                    <div class="row mb-0">
+                                    <div class="row mb-4 mt-2">
                                         <div class="col">
                                             <div class="d-flex justify-content-center">
                                                 <button type="submit" class="btn btn-primary">
@@ -125,15 +112,15 @@
                                     </div>
         
                                     <div class="row mb-3 justify-content-center">
-                                        <div class="text-center w-75">
-                                            <div>
+                                        <div class="text-center mt-2">
+                                            <small>
                                                 Dengan klik tombol "Masuk", Anda setuju dengan <a href="#">syarat &
                                                     ketentuan</a> serta <a href="#">kebijakan privasi</a> kami
-                                            </div>
+                                            </small>
                                         </div>
                                     </div>
         
-                                    <div class="row mb-0">
+                                    <div class="row mb-4 mt-2">
                                         <div class="col">
                                             <div class="d-flex justify-content-center">
                                                 <button type="submit" class="btn btn-primary">
