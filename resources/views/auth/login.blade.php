@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
+    <div class="container d-flex align-items-center justify-content-center" style="height: 85vh">
         <div class="row justify-content-center">
-            <div class="col-md-6 col-12">
+            <div class="col-md-8 col-12">
                 <div class="card">
-                    <div class="card-body py-5">
+                    <div class="card-body">
                         <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
@@ -19,7 +19,7 @@
                             </li>
                         </ul>
                         <div class="tab-content" id="myTabContent">
-                            <div class="tab-pane fade show active pt-5" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="tab-pane fade show active pt-3 pt-md-5" id="home" role="tabpanel" aria-labelledby="home-tab">
                                 <form method="POST" action="{{ route('login') }}">
                                     @csrf
 
@@ -88,7 +88,7 @@
                                     </div>
                                 </form>
                             </div>
-                            <div class="tab-pane fade pt-5" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                            <div class="tab-pane fade pt-3 pt-md-5" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                                 <form method="POST" action="{{ route('login') }}">
                                     @csrf
         
@@ -121,19 +121,6 @@
                                                     <strong>{{ $message }}</strong>
                                                 </span>
                                             @enderror
-                                        </div>
-                                    </div>
-        
-                                    <div class="row mb-3">
-                                        <div class="col-md-6 offset-md-4">
-                                            <div>
-                                                @if (Route::has('password.request'))
-                                                    Lupa kata sandi?
-                                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                                        Atur ulang
-                                                    </a>
-                                                @endif
-                                            </div>
                                         </div>
                                     </div>
         
