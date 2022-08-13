@@ -31,7 +31,7 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <!-- Left Side Of Navbar -->
-          <ul class="navbar-nav">
+          {{-- <ul class="navbar-nav">
             <li class="nav-item px-2">
               <a class="nav-link" href="/home">Perguruan Tinggi</a>
             </li>
@@ -47,7 +47,7 @@
             <li class="nav-item px-2">
               <a class="nav-link" href="/home">Bantuan</a>
             </li>
-          </ul>
+          </ul> --}}
 
           <!-- Right Side Of Navbar -->
           <ul class="navbar-nav ms-auto">
