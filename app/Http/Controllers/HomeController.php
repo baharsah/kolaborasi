@@ -28,11 +28,13 @@ class HomeController extends Controller
 
     public function perguruanTinggiHome()
     {
-        return view('perguruan_tinggi.home');
+        $account = auth()->user();
+        return view('perguruan_tinggi.home', compact('account'));
     }
 
     public function industriHome()
     {
-        return view('industri.home');
+        $account = auth()->user();
+        return view('industri.home', compact('account'));
     }
 }

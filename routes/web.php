@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PerguruanTinggiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +24,7 @@ Auth::routes();
 
 Route::middleware(['auth', 'user-access:perguruan_tinggi'])->group(function () {
     Route::get('/perguruan-tinggi/home', [HomeController::class, 'perguruanTinggiHome'])->name('perguruan_tinggi.home');
+    Route::get('/perguruan-tinggi/profile', [PerguruanTinggiController::class, 'index'])->name('perguruan_tinggi.profile');
 });
 
 Route::middleware(['auth', 'user-access:industri'])->group(function () {
