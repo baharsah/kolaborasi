@@ -37,12 +37,16 @@ class CreateUsersSeeder extends Seeder
                'email'=>'user@industri.com',
                'type'=>1,
                'password'=> bcrypt('Industri123'),
+               'jabatan'=> 'Manager',
+               'nama_instansi'=> 'Tenun Tanjak Bengkalis'
             ],
             [
                 'name'=>'Industri2',
                 'email'=>'user2@industri.com',
                 'type'=>1,
                 'password'=> bcrypt('Industri123'),
+                'jabatan'=> 'CEO',
+                'nama_instansi'=> 'Ojek Bengkalis'
              ],
         ];
     
