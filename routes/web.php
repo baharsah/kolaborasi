@@ -17,9 +17,21 @@ use App\Http\Controllers\PerguruanTinggiController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('welcome');
+
+
+Route::middleware(['guest'])->group(function () {
+    Route::get('/', function () {
+        return view('welcome');
+    })->name('welcome');
+
+    Route::get('/login/perguruan-tinggi', function () {
+        return view('auth.login');
+    })->name('loginauth');
+
+    Route::get('/login/industri', function () {
+        return view('auth.login');
+    });
+});
 
 Auth::routes();
 
@@ -35,34 +47,23 @@ Route::middleware(['auth', 'user-access:industri'])->group(function () {
     Route::put('/industri/update/{id}', [IndustriController::class, 'update'])->name('industri.update');
 });
 
-Route::middleware(['auth'])->group(function() {
-    Route::get('/account', function () {
-        return view('account');
-    });
-    
+Route::middleware(['auth'])->group(function () {
     Route::get('/submission', function () {
         return view('submission');
     });
-    
+
     Route::get('/discussion', function () {
         return view('discussion');
     });
-    
+
     Route::get('/information', function () {
         return view('information');
     });
+
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 });
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/profile', function () {
     return view('profil');
-});
-
-Route::get('/login/perguruan-tinggi', function() {
-    return view('auth.login');
-})->name('loginauth');
-
-Route::get('/login/industri', function() {
-    return view('auth.login');
 });

@@ -14,12 +14,12 @@
                             </div>
                         @endif
 
-                        {{ __('You are logged in!') }}
+                        {{ __('Anda telah login! Silahkan    ke ') }}
 
                         @if (auth()->user()->type == 'perguruan_tinggi')
-                            <a href="{{ url('admin/routes') }}">Perguruan Tinggi User</a>
+                            <a href="{{ route('perguruan_tinggi.home') }}">Halaman Utama Pengguna Perguruan Tinggi</a>
                         @else
-                            <div class=”panel-heading”>Industri User</div>
+                            <a href="{{ route('industri.home') }}">Halaman Utama Pengguna Industri</a>
                         @endif
                     </div>
                 </div>
