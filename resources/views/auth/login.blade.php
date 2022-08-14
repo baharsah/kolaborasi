@@ -7,7 +7,7 @@
                 <div class="card pt-2 pb-4 px-2">
                     <div class="card-body">
                         <div class="h4 text-center text-primary mb-4">Masuk</div>
-                        <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+                        <ul class="nav nav-tabs justify-content-center mb-3 mb-md-4" id="myTab" role="tablist">
                             <li class="nav-item" role="presentation">
                                 <a class="nav-link {{ request()->segment(2) == 'perguruan-tinggi' ? 'active' : null }}"
                                     href="{{ url('/login/perguruan-tinggi') }}"role="tab">
@@ -19,7 +19,12 @@
                                     href="{{ url('/login/industri') }}" role="tab">Industri</a>
                             </li>
                         </ul>
-                        <div class="tab-content pt-3 pt-md-4">
+                        @if (\Session::has('error'))
+                            <div class="alert alert-danger" role="alert">
+                                {{ \Session::get('error') }}
+                            </div>
+                        @endif
+                        <div class="tab-content">
                             <div class="tab-pane fade {{ request()->segment(2) == 'perguruan-tinggi' ? 'show active' : null }}"
                                 role="tabpanel">
                                 <form method="POST" action="{{ route('login') }}">

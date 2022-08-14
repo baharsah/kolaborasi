@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\IndustriController;
 use App\Http\Controllers\PerguruanTinggiController;
 
 /*
@@ -18,7 +19,7 @@ use App\Http\Controllers\PerguruanTinggiController;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
 Auth::routes();
 
@@ -29,6 +30,7 @@ Route::middleware(['auth', 'user-access:perguruan_tinggi'])->group(function () {
 
 Route::middleware(['auth', 'user-access:industri'])->group(function () {
     Route::get('/industri/home', [HomeController::class, 'industriHome'])->name('industri.home');
+    Route::get('/industri/profile', [IndustriController::class, 'index'])->name('industri.profile');
 });
 
 Route::middleware(['auth'])->group(function() {
@@ -57,7 +59,7 @@ Route::get('/profile', function () {
 
 Route::get('/login/perguruan-tinggi', function() {
     return view('auth.login');
-});
+})->name('loginauth');
 
 Route::get('/login/industri', function() {
     return view('auth.login');

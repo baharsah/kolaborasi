@@ -1,0 +1,13 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+class IndustriController extends Controller
+{
+    public function index() {
+        $account = auth()->user();
+        return view('industri.profile', compact('account'));
+    }
+}
