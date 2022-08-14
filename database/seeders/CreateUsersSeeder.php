@@ -27,7 +27,7 @@ class CreateUsersSeeder extends Seeder
             [
                'name'=>'Desi Amirullah',
                'email'=>'andes@polbeng.com',
-               'type'=> 2,
+               'type'=> 0,
                'password'=> bcrypt('Andes123'),
                'jabatan'=> 'Dosen',
                'nama_instansi'=> 'Politeknik Negeri Bengkalis'
@@ -35,13 +35,13 @@ class CreateUsersSeeder extends Seeder
             [
                'name'=>'Industri',
                'email'=>'user@industri.com',
-               'type'=>0,
+               'type'=>1,
                'password'=> bcrypt('Industri123'),
             ],
             [
                 'name'=>'Industri2',
                 'email'=>'user2@industri.com',
-                'type'=>0,
+                'type'=>1,
                 'password'=> bcrypt('Industri123'),
              ],
         ];
