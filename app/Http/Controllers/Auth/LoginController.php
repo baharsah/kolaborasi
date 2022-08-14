@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
@@ -36,5 +37,31 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+    }
+
+    public function login(Request $request)
+    {   
+        $input = $request->all();
+     
+        $this->validate($request, [
+            'email' => 'required|email',
+            'password' => 'required',
+        ]);
+     
+        if(auth()->attempt(array('email' => $input['email'], 'password' => $input['password'])))
+        {
+            if (auth()->user()->type == 'perguruan_tinggi') {
+                return redirect()->route('perguruan_tinggi.home');
+            }else if (auth()->user()->type == 'industri') {
+                return redirect()->route('industri.home');
+            }
+            else{
+                return redirect()->route('login')->with('error','Akun anda tidak terdaftar.');;
+            }
+        }else{
+            return redirect()->route('login')
+                ->with('error','Email dan password anda salah.');
+        }
+          
     }
 }

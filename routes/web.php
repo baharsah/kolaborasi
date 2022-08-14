@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +17,16 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Auth::routes();
+
+Route::middleware(['auth', 'user-access:perguruan_tinggi'])->group(function () {
+    Route::get('/perguruan-tinggi/home', [HomeController::class, 'perguruanTinggiHome'])->name('perguruan_tinggi.home');
+});
+
+Route::middleware(['auth', 'user-access:industri'])->group(function () {
+    Route::get('/industri/home', [HomeController::class, 'industriHome'])->name('industri.home');
 });
 
 Route::middleware(['auth'])->group(function() {
@@ -35,8 +46,6 @@ Route::middleware(['auth'])->group(function() {
         return view('information');
     });
 });
-
-Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 

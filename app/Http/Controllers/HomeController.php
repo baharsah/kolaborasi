@@ -25,4 +25,14 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+    public function perguruanTinggiHome()
+    {
+        return view('perguruan_tinggi.home');
+    }
+
+    public function industriHome()
+    {
+        return view('industri.home');
+    }
 }
