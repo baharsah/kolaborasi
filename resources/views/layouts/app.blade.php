@@ -55,7 +55,7 @@
             @guest
             @if (Route::has('login'))
             <li class="nav-item">
-              <a class="btn btn-primary" href="{{ route('login') }}">Masuk</a>
+              <a class="btn btn-primary" href="{{ url('login/perguruan-tinggi') }}">Masuk</a>
             </li>
             @endif
 
