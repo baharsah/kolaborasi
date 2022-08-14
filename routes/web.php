@@ -30,7 +30,8 @@ Route::middleware(['auth', 'user-access:perguruan_tinggi'])->group(function () {
 
 Route::middleware(['auth', 'user-access:industri'])->group(function () {
     Route::get('/industri/home', [HomeController::class, 'industriHome'])->name('industri.home');
-    Route::get('/industri/profile', [IndustriController::class, 'index'])->name('industri.profile');
+    Route::get('/industri/{id}/profile', [IndustriController::class, 'edit'])->name('industri.profile');
+    Route::put('/industri/update/{id}', [IndustriController::class, 'update'])->name('industri.update');
 });
 
 Route::middleware(['auth'])->group(function() {

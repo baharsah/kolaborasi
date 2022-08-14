@@ -15,7 +15,7 @@
                     <div> {{ $account->jabatan }} | {{ $account->nama_instansi }}</div>
                 </div>
             </div>
-            <div><a href="{{ route('industri.profile') }}" class="btn btn-outline-primary">Ubah Profil</a></div>
+            <div><a href="{{ route('industri.profile', ['id' => $account->id]) }}" class="btn btn-outline-primary">Ubah Profil</a></div>
         </div>
         <div class="row justify-content-center">
             <div class="col-12">

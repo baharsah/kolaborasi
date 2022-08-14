@@ -4,7 +4,7 @@
 <div class="container">
   <div class="d-flex justify-content-between my-3">
     <div>
-      <a href="{{ url()->previous() }}" class="btn btn-light">
+      <a href="{{ route('industri.home') }}" class="btn btn-light">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
           <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
         </svg>
@@ -18,7 +18,8 @@
       <div class="card">
         <div class="card-header">Lengkapi data diri</div>
         <div class="card-body py-5">
-          <form method="POST" action="{{ route('register') }}">
+          <form method="POST" action="{{ route('industri.update', ['id' => $account->id]) }}">
+            @method('put')
             @csrf
 
             <div class="row mb-3">
@@ -64,12 +65,12 @@
             </div> --}}
 
             <div class="row mb-3">
-              <label for="company" class="col-md-4 col-form-label text-md-end">Jabatan</label>
+              <label for="jabatan" class="col-md-4 col-form-label text-md-end">Jabatan</label>
 
               <div class="col-md-6">
-                <input id="company" type="text" class="form-control @error('company') is-invalid @enderror" name="company" value="{{ $account->jabatan }}" required autocomplete="company" autofocus>
+                <input id="jabatan" type="text" class="form-control @error('jabatan') is-invalid @enderror" name="jabatan" value="{{ $account->jabatan }}" required autocomplete="jabatan" autofocus>
 
-                @error('company')
+                @error('jabatan')
                 <span class="invalid-feedback" role="alert">
                   <strong>{{ $message }}</strong>
                 </span>
@@ -78,12 +79,12 @@
             </div>
 
             <div class="row mb-3">
-              <label for="company" class="col-md-4 col-form-label text-md-end">Nama Perusahaan</label>
+              <label for="nama_instansi" class="col-md-4 col-form-label text-md-end">Nama Perusahaan</label>
 
               <div class="col-md-6">
-                <input id="company" type="text" class="form-control @error('company') is-invalid @enderror" name="company" value="{{ $account->nama_instansi }}" required autocomplete="company" autofocus>
+                <input id="nama_instansi" type="text" class="form-control @error('nama_instansi') is-invalid @enderror" name="nama_instansi" value="{{ $account->nama_instansi }}" required autocomplete="nama_instansi" autofocus>
 
-                @error('company')
+                @error('nama_instansi')
                 <span class="invalid-feedback" role="alert">
                   <strong>{{ $message }}</strong>
                 </span>
