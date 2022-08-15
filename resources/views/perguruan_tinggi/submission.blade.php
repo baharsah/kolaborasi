@@ -25,7 +25,7 @@
                             <div class="h6">Perguruan Tinggi</div>
                             <div>
                                 <a class="text-decoration-none"
-                                    href="{{ route('industri.profile', ['id' => auth()->user()->id]) }}">
+                                    href="{{ route('perguruan_tinggi.profile', ['id' => auth()->user()->id]) }}">
                                     Ubah Profil
                                 </a>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"
