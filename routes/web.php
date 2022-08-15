@@ -1,7 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\IndustriController;
+use App\Http\Controllers\PerguruanTinggiController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\IndustriController;
 use App\Http\Controllers\PerguruanTinggiController;
