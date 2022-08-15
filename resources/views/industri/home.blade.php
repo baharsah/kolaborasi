@@ -195,7 +195,7 @@
                                         ajukan komentar untuk berkolaborasi
                                     </div>
                                     <div>
-                                        <a href="{{ route('submission') }}" class="btn btn-primary">
+                                        <a href="{{ route('industri.submission', ['id' => $account->id]) }}" class="btn btn-primary">
                                             Kontribusikan Peluang Cipta
                                         </a>
                                     </div>
@@ -217,8 +217,9 @@
                                         ajukan komentar untuk berkolaborasi
                                     </div>
                                     <div>
-                                        <button type="button" class="btn btn-primary">Kontribusikan Peluang
-                                            Cipta</button>
+                                        <a href="{{ route('industri.submission', ['id' => $account->id]) }}" class="btn btn-primary">
+                                            Kontribusikan PeluangCipta
+                                        </a>
                                     </div>
                                 </div>
                             </div>

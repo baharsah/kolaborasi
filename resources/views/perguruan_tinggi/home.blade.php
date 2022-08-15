@@ -194,7 +194,7 @@
                                         ajukan ide solutif anda
                                     </div>
                                     <div>
-                                        <a href="{{ route('submission') }}" class="btn btn-primary">Kontribusikan Ide Solutif</a>
+                                        <a href="{{ route('perguruan_tinggi.submission', ['id' => $account->id]) }}" class="btn btn-primary">Kontribusikan Ide Solutif</a>
                                     </div>
                                 </div>
                             </div>
@@ -213,7 +213,7 @@
                                         ajukan ide solutif anda
                                     </div>
                                     <div>
-                                        <a href="{{ route('submission') }}" class="btn btn-primary">Kontribusikan Ide Solutif</a>
+                                        <a href="{{ route('perguruan_tinggi.submission', ['id' => $account->id]) }}" class="btn btn-primary">Kontribusikan Ide Solutif</a>
                                     </div>
                                 </div>
                             </div>

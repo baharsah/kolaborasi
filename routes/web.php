@@ -47,12 +47,16 @@ Route::middleware(['auth', 'user-access:perguruan_tinggi'])->group(function () {
     Route::get('/perguruan-tinggi/home', [HomeController::class, 'perguruanTinggiHome'])->name('perguruan_tinggi.home');
     Route::get('/perguruan-tinggi/{id}/profile', [PerguruanTinggiController::class, 'edit'])->name('perguruan_tinggi.profile');
     Route::put('/perguruan-tinggi/update/{id}', [PerguruanTinggiController::class, 'update'])->name('perguruan_tinggi.update');
+    Route::get('/perguruan-tinggi/submission/{id}', [PerguruanTinggiController::class, 'submissionPage'])->name('perguruan_tinggi.submission');
+    Route::post('/perguruan-tinggi/submission/{id}', [PerguruanTinggiController::class, 'submission'])->name('perguruan_tinggi.submission.send');
 });
 
 Route::middleware(['auth', 'user-access:industri'])->group(function () {
     Route::get('/industri/home', [HomeController::class, 'industriHome'])->name('industri.home');
     Route::get('/industri/{id}/profile', [IndustriController::class, 'edit'])->name('industri.profile');
     Route::put('/industri/update/{id}', [IndustriController::class, 'update'])->name('industri.update');
+    Route::get('/industri/submission/{id}', [IndustriController::class, 'submissionPage'])->name('industri.submission');
+    Route::post('/industri/submission/{id}', [IndustriController::class, 'submission'])->name('industri.submission.send');
 });
 
 Route::middleware(['auth'])->group(function () {
