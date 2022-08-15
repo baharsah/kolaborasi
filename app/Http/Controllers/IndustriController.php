@@ -15,7 +15,7 @@ class IndustriController extends Controller
     public function update($id, Request $request) {
         $user = User::find($id);
         $user->update($request->except(['_token','submit']));
-        return redirect()->route('industri.profile', ['id' => $id]);
+        return redirect()->route('industri.home');
     }
 
     public function submissionPage($id) {

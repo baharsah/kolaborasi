@@ -15,7 +15,7 @@ class PerguruanTinggiController extends Controller
     public function update($id, Request $request) {
         $user = User::find($id);
         $user->update($request->except(['_token','submit']));
-        return redirect()->route('perguruan_tinggi.profile', ['id' => $id]);
+        return redirect()->route('perguruan_tinggi.home');
     }
 
     public function submissionPage($id) {
