@@ -58,7 +58,7 @@ Route::middleware(['auth', 'user-access:industri'])->group(function () {
 Route::middleware(['auth'])->group(function () {
     Route::get('/submission', function () {
         return view('submission');
-    });
+    })->name('submission');
 
     Route::get('/discussion', function () {
         return view('discussion');

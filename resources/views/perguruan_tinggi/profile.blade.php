@@ -63,18 +63,18 @@
                                         </div>
 
                                         {{-- <div class="row justify-content-end mb-3">
-                    <label for="born" class="col-md-4 col-form-label text-md-end">Tempat/Tanggal Lahir</label>
+                                            <label for="born" class="col-md-4 col-form-label text-md-end">Tempat/Tanggal Lahir</label>
 
-                    <div class="col-md-6">
-                      <input id="born" type="text" class="form-control @error('born') is-invalid @enderror" name="born" value="{{ old('born') }}" required autocomplete="born" autofocus>
+                                            <div class="col-md-6">
+                                            <input id="born" type="text" class="form-control @error('born') is-invalid @enderror" name="born" value="{{ old('born') }}" required autocomplete="born" autofocus>
 
-                      @error('born')
-                      <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
-                      </span>
-                      @enderror
-                    </div>
-                  </div> --}}
+                                            @error('born')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                            @enderror
+                                            </div>
+                                        </div> --}}
 
                                         <div class="row justify-content-end mb-3">
                                             <label for="nama_instansi" class="col-md-4 col-form-label text-md-end">Nama
@@ -95,33 +95,33 @@
                                         </div>
 
                                         {{-- <div class="row justify-content-end mb-3">
-                    <label for="company-address" class="col-md-4 col-form-label text-md-end">Alamat Lengkap Pergutruan Tinggi</label>
+                                            <label for="company-address" class="col-md-4 col-form-label text-md-end">Alamat Lengkap Pergutruan Tinggi</label>
 
-                    <div class="col-md-6">
-                      <input id="company-address" type="text" class="form-control @error('company-address') is-invalid @enderror" name="company-address" value="{{ old('company-address') }}" required autocomplete="company-address" autofocus>
+                                            <div class="col-md-6">
+                                            <input id="company-address" type="text" class="form-control @error('company-address') is-invalid @enderror" name="company-address" value="{{ old('company-address') }}" required autocomplete="company-address" autofocus>
 
-                      @error('company-address')
-                      <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
-                      </span>
-                      @enderror
-                    </div>
-                  </div> --}}
+                                            @error('company-address')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                            @enderror
+                                            </div>
+                                        </div> --}}
                                     </div>
                                     <div class="col-md-6">
                                         {{-- <div class="row justify-content-start mb-3">
-                    <label for="phone" class="col-md-4 col-form-label text-md-end">No. Hp</label>
+                                            <label for="phone" class="col-md-4 col-form-label text-md-end">No. Hp</label>
 
-                    <div class="col-md-6">
-                      <input id="phone" type="text" class="form-control @error('phone') is-invalid @enderror" name="phone" value="{{ old('phone') }}" required autocomplete="phone" autofocus>
+                                            <div class="col-md-6">
+                                            <input id="phone" type="text" class="form-control @error('phone') is-invalid @enderror" name="phone" value="{{ old('phone') }}" required autocomplete="phone" autofocus>
 
-                      @error('phone')
-                      <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
-                      </span>
-                      @enderror
-                    </div>
-                  </div> --}}
+                                            @error('phone')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                            @enderror
+                                            </div>
+                                        </div> --}}
 
                                         <div class="row justify-content-start mb-3">
                                             <label for="email" class="col-md-4 col-form-label text-md-end">Email</label>
