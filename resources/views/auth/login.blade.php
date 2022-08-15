@@ -85,7 +85,7 @@
 
                                     <div class="text-center pt-1">
                                         <small>
-                                            Belum punya akun? <a href="/register">Daftar disini</a>.
+                                            Belum punya akun? <a href="{{ route('register.perguruan_tinggi') }}">Daftar disini</a>.
                                         </small>
                                     </div>
                                 </form>
@@ -150,7 +150,7 @@
 
                                     <div class="text-center pt-1">
                                         <small>
-                                            Belum punya akun? <a href="/register">Daftar disini</a>.
+                                            Belum punya akun? <a href="{{ route('register.industri') }}">Daftar disini</a>.
                                         </small>
                                     </div>
                                 </form>
