@@ -23,7 +23,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        if (auth()->user()->type = 0) {
+            return redirect()->route('perguruan_tinggi.home');
+        } 
+        return redirect()->route('industri.home');
     }
 
     public function perguruanTinggiHome()

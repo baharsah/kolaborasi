@@ -55,10 +55,10 @@ class LoginController extends Controller
             } else if (auth()->user()->type == 'industri') {
                 return redirect()->route('industri.home');
             } else {
-                return redirect()->route('loginauth')->with('error', 'Akun anda tidak terdaftar.');;
+                return redirect()->route('login.perguruan_tinggi')->with('error', 'Akun anda tidak terdaftar.');;
             }
         } else {
-            return redirect()->route('loginauth')
+            return redirect()->route('login.perguruan_tinggi')
                 ->with('error', 'Email dan password anda salah.');
         }
     }

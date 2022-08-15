@@ -26,11 +26,19 @@ Route::middleware(['guest'])->group(function () {
 
     Route::get('/login/perguruan-tinggi', function () {
         return view('auth.login');
-    })->name('loginauth');
+    })->name('login.perguruan_tinggi');
 
     Route::get('/login/industri', function () {
         return view('auth.login');
-    });
+    })->name('login.industri');
+    
+    Route::get('/register/perguruan-tinggi', function () {
+        return view('auth.register');
+    })->name('register.perguruan_tinggi');
+
+    Route::get('/register/industri', function () {
+        return view('auth.register');
+    })->name('register.industri');
 });
 
 Auth::routes();
