@@ -5,7 +5,7 @@
         <!-- Akademisi -->
         <div>
             <div class="d-flex justify-content-between">
-                <div>Pengajuan Ide Solutif</div>
+                <div class="h2">Pengajuan Ide Solutif</div>
                 <div>
                     <a href="{{ route('perguruan_tinggi.home') }}" class="btn btn-light">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
